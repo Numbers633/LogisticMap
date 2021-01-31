@@ -1,11 +1,11 @@
 #include <iostream>
 #include "Source.h"
-#include <stdlib.h>
 
 using namespace std;
 
 int main()
 {
+    //Initialize input values
     double rValue = 0;
     double xValue = 0;
     int numCycles = 2;
@@ -14,159 +14,99 @@ int main()
     //Original input
 
     cout << "Logistic map finder" << endl;
-    cout << "Please input a starting value for R: ";
-    cin >> rValue;
-    cout << endl << "You input a value for R, now input a starting value for X: ";
-    cin >> xValue;
-
-    //Calculate
-
-    if (xValue < 0 || xValue > 1)
+    cout << "Used for generating cycles." << endl;
+    
+    while (true)
     {
-        xValue = 0.5;
-        cout << "The input value for X is wrong.  X has been set to 0.5." << endl;
-
-        bool isReady = false;
-    }
-
-    if (rValue > 4 || rValue < -2)
-    {
-        rValue = 3.822;
-        cout << "R is outside of the limits.  It is now 3.889." << endl;
-
-        bool isReady = false;
-    }
-    else if (rValue == 3)
-    {
-        cout << "3 is a bifurcation point and therfore the program will detect a false unstable cycle.  Choose a different value of R for the program to work: ";
+        //Recieve user input
+        cout << endl << endl << "R: ";
         cin >> rValue;
-    }
+        cout << endl << "X: ";
+        cin >> xValue;
+        cout << endl << endl << endl << "Please enter the number of iterations to do before looking: ";
+        cin >> numPreIterations;
+        cout << "Please enter the maximum cycle length: ";
+        cin >> maxCycleLength;
+        cout << endl << "Search Quality: ";
+        cin >> searchQuality;
 
-    if (isReady = false)
-    {
-        cout << "There are errors in the values.  The value is automatically set to the described values." << endl;
-    }
-
-    cout << endl << "The number of cycles to be found is needed.  Enter 0 to close this application." << endl;
-    cout << "Please enter the number: ";
-    cin >> numCycles;
-
-    if (numCycles >= 0)
-    {
-        //
-        // The cycles are now ready to be calculated.  First, the info will be output.
-        // TODO: Iterate the equation rx(1-x) 4000 times to kill any initial values outside.
-        //
-
-        cout << "Calculating conditions." << endl;
-        cout << "The R value is set to " << rValue << ".  The X value is " << xValue << "." << endl;;
-
-        int i = 0;
-        int numIterations = 0;
-        int cycleLength = 0;
-        int numPastCycles = 0;
-
-        double original_Value = 0;
-        double in2XValue = 0;
-        bool cycleFound = false;
-
-        for (i = 0, i < 4000, i++;;)
+        if (xValue > 1 || xValue < 0)
         {
-            numIterations++;
-            i++;
+            cout << "WARNING: X CANNOT BE LESS THAN 0 OR GREATER THAT 1!" << endl;
+            continue;
+        }
 
-            if (numIterations == 10000)
+        // Initiallize
+        double iMax = numPreIterations + maxCycleLength;
+        int i = 0;
+        double repeatValue = xValue;
+        double numPreIterations2 = numPreIterations;
+        bool cycleFound = false;
+        int cycleLength = 0;
+        int numSearches = 0;
+        int cycleLength1 = 0;
+        int cycleLength2 = cycleLength;
+        double currentXValue = xValue;
+        int j = i;
+
+        for (i = 0; i < iMax; i++)
+        {
+            // Check for the cycle
+            j = i;
+
+            cycleLength1++;
+            cycleLength++;
+            cycleLength2++;
+
+            if (i == numPreIterations && numSearches == 0)
             {
-                double newXValue = xValue;
-
-                in2XValue = xValue * 3000000;
-                in2XValue = floor(in2XValue);
-
-
-                original_Value = in2XValue;
+                repeatValue = floor(xValue * searchQuality);
+                numSearches++;
+                cycleLength1 = 1;
             }
-            else if (numIterations > 10000)
+            else if (numSearches > 0)
             {
-                double newXValue = xValue;
-
-                double inXValue = xValue * 3000000;
-                inXValue = floor(inXValue);
-
-                if (inXValue == original_Value)
+                if (xValue = repeatValue)
                 {
-                    cycleLength = numIterations - 10000;
+                    cycleFound = true;
 
-                    if (cycleFound == false)
+                    currentXValue = floor(xValue * searchQuality);
+
+                    cycleLength = cycleLength1 + 1;
+
+                    if (cycleLength1 != cycleLength)
                     {
-                        cout << "When R = " << rValue << ", X is " << cycleLength << "-periodic." << endl;
+                        cycleLength1 = cycleLength;
                     }
 
-                    cycleFound = true;
+                    cout << endl << "Cycle found.  Length: " << cycleLength << "." << endl;
+
+                    break;
                 }
 
-                xValue = newXValue;
+                
+                cycleLength = cycleLength1;
             }
 
-            if (cycleFound == false)
-            {
-                double oldXValue = xValue;
-                xValue = oldXValue * rValue * (1 - oldXValue);
-                cout << numIterations << ": " << xValue << endl;
-            }
-        }
+            //Bugfix: The code cannot stop
+            numPreIterations = numPreIterations2;
+            i = j;
 
-        cout << "A cycle has been found." << endl;
-        return 0;
-    }
-    else if (numCycles = -1)
-    {
-        int numPixelsY = 60;
-
-        cout << endl << "You have entered -1 for the number of cycles, so enter the pixels: ";
-        cin >> numPixelsY;
-
-        int i = 0;
-        double pixelNumD = 0;
-        double pixelNum = 0;
-
-        for (i = 0, i < 4000, i++;;)
-        {
+            // Iterate the equation rx(1-x)
             double oldXValue = xValue;
-            xValue = oldXValue * rValue * (1 - oldXValue);
-            
-            pixelNumD = numPixelsY * xValue;
-            pixelNum = floor(pixelNumD);
-            cout << pixelNum << endl;
+            xValue = rValue * oldXValue * (1 - oldXValue);
         }
-    }
-    else if (numCycles = -2)
-    {
-        double rValueMinimum = -2;
-        double rValueMaximum = 4;
 
-        cout << endl << "Random R value.  Please enter the minimum value: ";
-        cin >> rValueMinimum;
-        cout << "Random R value.  Please enter the maximum value: ";
-        cin >> rValueMaximum;
+        // Determine if CycleFound = true
 
-        double rValue0 = rand();
-        double rValueRange = rValueMaximum - rValueMinimum;
-        double rValue1 = rValue0 * rValueRange;
-        rValue = rValue1 + rValueMinimum;
-
-        cout << endl << "The chosen R value is " << rValue << endl;
-
-        int i = 0;
-
-        for (i = 0, i < 4000, i++;;)
+        if(cycleFound = false)
         {
-            double oldXValue = xValue;
-            xValue = oldXValue * rValue * (1 - oldXValue);
-            cout << xValue << endl;
+            cout << endl << "Failed to find a cycle.  It is possible that it might actually be chaos or a bifurcation point.  Try adjusting R." << endl;
         }
+
+        cout << endl << endl << endl << endl << endl;
+        cout << endl << endl << endl << endl << endl;
     }
-    else
-    {
-        cout << "You have enter 0 for the number of cycles.  The application will close soon." << endl;
-    }
+
+    return 0;
 }
