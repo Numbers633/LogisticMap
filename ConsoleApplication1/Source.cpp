@@ -8,8 +8,9 @@ int main()
     //Initialize input values
     double rValue = 0;
     double xValue = 0;
-    int numCycles = 2;
-    bool isReady = true;
+    int numPreIterations = 0;
+    double maxCycleLength = 0;
+    double searchQuality = 300;
 
     //Original input
 
