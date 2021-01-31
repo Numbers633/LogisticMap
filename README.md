@@ -5,7 +5,7 @@ There are some limits for the X and R values.  The last 3 numbers entered should
 --Logistic Map--
 
 R must be between -2 and 4;
-X maus be between 0 and 1.
+X must be between 0 and 1.
 
 --Cycles--
 
