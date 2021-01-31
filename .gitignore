@@ -1,0 +1,11 @@
+
+*.db
+*.opendb
+.vs/ConsoleApplication1/v14/.suo
+*.pdb
+*.ilk
+*.exe
+*.idb
+*.obj
+*.log
+*.tlog
