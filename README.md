@@ -7,6 +7,10 @@ There are some limits for the X and R values.  The last 3 numbers entered should
 R must be between -2 and 4;
 X must be between 0 and 1.
 
+--Bifurcation--
+
+A few points will not be resolvable (such as 1 and 3) by the program.  3 is a true bifurcation point, and occurs because, at the intersection point, the parabola is inclined at 90 degrees to the axis.
+
 --Cycles--
 
 All of the numbers below are numbers to try out in this application:
@@ -24,7 +28,7 @@ All of the numbers below are numbers to try out in this application:
 
 5-cycle:
 -1.9902578,
- 3.74,
+ 3.739,
  3.906,
  3.990257307469,
 
