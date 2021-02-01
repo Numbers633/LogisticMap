@@ -55,47 +55,37 @@ int main()
             // Check for the cycle
             j = i;
 
-            cycleLength1++;
-            cycleLength++;
-            cycleLength2++;
-
-            if (i == numPreIterations && numSearches == 0)
+            if (j == numPreIterations)
             {
-                repeatValue = floor(xValue * searchQuality);
-                numSearches++;
-                cycleLength1 = 1;
+                cycleFound = false;
+                cycleLength = 0;
+                repeatValue = xValue;
+                cout << "Started searching" << endl;
             }
-            else if (numSearches > 0)
+            else if (j > numPreIterations)
             {
-                if (xValue = repeatValue)
+                cycleFound = false;
+                cycleLength++;
+
+                cout << "Searching" << endl;
+
+                if (xValue == repeatValue)
                 {
+                    std::cout << "Found the cycle.  Length: " << cycleLength << endl;
                     cycleFound = true;
-
-                    currentXValue = floor(xValue * searchQuality);
-
-                    cycleLength = cycleLength1 + 1;
-
-                    if (cycleLength1 != cycleLength)
-                    {
-                        cycleLength1 = cycleLength;
-                    }
-
-                    cout << endl << "Cycle found.  Length: " << cycleLength << "." << endl;
-
-                    break;
                 }
-
-                
-                cycleLength = cycleLength1;
             }
 
-            //Bugfix: The code cannot stop
-            numPreIterations = numPreIterations2;
             i = j;
 
             // Iterate the equation rx(1-x)
             double oldXValue = xValue;
             xValue = rValue * oldXValue * (1 - oldXValue);
+
+            if (cycleFound == true)
+            {
+                break;
+            }
         }
 
         // Determine if CycleFound = true
