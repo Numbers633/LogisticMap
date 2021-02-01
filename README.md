@@ -13,6 +13,8 @@ A few points will not be resolvable (such as 1 and 3) by the program.  3 is a tr
 
 --Cycles--
 
+If you ever find a new stable cycle with this program, please add it to the cycle dictionary below.
+
 All of the numbers below are numbers to try out in this application:
 
 2-cycle:
@@ -20,20 +22,17 @@ All of the numbers below are numbers to try out in this application:
 
 3-cycle:
  3.8284271247461900976033774841939615713934375075389614635,
--1.8284271247461900976033774841939615713934375075389614635
 
 4-cycle:
 3.44948974278317809819728407470589139196594748065667012843269256725096037745731502653985943310464023481,
 3.96010188374002
 
 5-cycle:
--1.9902578,
  3.739,
  3.906,
  3.990257307469,
 
 6-cycle:
--1.626904,
  3.625532464,
  3.9376,
 
