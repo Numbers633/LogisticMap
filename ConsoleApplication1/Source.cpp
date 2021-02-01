@@ -52,6 +52,11 @@ int main()
 
         for (i = 0; i < iMax; i++)
         {
+            if (cycleFound == true)
+            {
+                break;
+            }
+
             // Check for the cycle
             j = i;
 
@@ -60,14 +65,11 @@ int main()
                 cycleFound = false;
                 cycleLength = 0;
                 repeatValue = xValue;
-                cout << "Started searching" << endl;
             }
             else if (j > numPreIterations)
             {
                 cycleFound = false;
                 cycleLength++;
-
-                cout << "Searching" << endl;
 
                 if (xValue == repeatValue)
                 {
@@ -81,16 +83,11 @@ int main()
             // Iterate the equation rx(1-x)
             double oldXValue = xValue;
             xValue = rValue * oldXValue * (1 - oldXValue);
-
-            if (cycleFound == true)
-            {
-                break;
-            }
         }
 
         // Determine if CycleFound = true
 
-        if(cycleFound = false)
+        if(cycleFound == false)
         {
             cout << endl << "Failed to find a cycle.  It is possible that it might actually be chaos or a bifurcation point.  Try adjusting R." << endl;
         }
