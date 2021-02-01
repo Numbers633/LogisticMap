@@ -31,7 +31,7 @@ All of the numbers below are numbers to try out in this application:
 3.96010188374002
 
 5-cycle:
- 3.739,
+ 3.7385,
  3.906,
  3.990257307469,
 
