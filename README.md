@@ -7,7 +7,16 @@ There are some limits for the X and R values.  The last 3 numbers entered should
 R must be between -2 and 4;
 X must be between 0 and 1.
 
+If you exeed R = 4, or make x less than 0 or more that 1, it will blow up to infinity.
+ALL LIMITS APPLY.
+
+--Bifurcation--
+
+A few points will not be resolvable (such as 1 and 3) by the program.  3 is a true bifurcation point, and occurs because, at the intersection point, the parabola is inclined at 90 degrees to the axis.  1 is also not resolvable as a cycle because it is declining very slowly, constantly getting smaller.  After an infinity of iterations, however, it will stabillize at 0.  The program reports if it dosen't find a cycle by saying "Failed to find a cycle.  It is possible that it might actually be chaos or a bifurcation point.  Try adjusting R.".  This statement can also occur when the R value (above 3.569945671871) is chaotic.  However, at certain places, X is actually periodic (as described below.).
+
 --Cycles--
+
+If you ever find a new stable cycle with this program, please add it to the cycle dictionary below.
 
 All of the numbers below are numbers to try out in this application:
 
@@ -16,20 +25,17 @@ All of the numbers below are numbers to try out in this application:
 
 3-cycle:
  3.8284271247461900976033774841939615713934375075389614635,
--1.8284271247461900976033774841939615713934375075389614635
 
 4-cycle:
 3.44948974278317809819728407470589139196594748065667012843269256725096037745731502653985943310464023481,
 3.96010188374002
 
 5-cycle:
--1.9902578,
- 3.74,
+ 3.7385,
  3.906,
  3.990257307469,
 
 6-cycle:
--1.626904,
  3.625532464,
  3.9376,
 
