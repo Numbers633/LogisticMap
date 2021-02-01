@@ -16,7 +16,7 @@ A few points will not be resolvable (such as 1 and 3) by the program.  3 is a tr
 
 --Cycles--
 
-If you ever find a new stable cycle with this program, please add it to the cycle dictionary below.
+If you ever find a new stable cycle with this program, please add it to the cycle dictionary below.  It is recommended that if you need high search quality that you also use higher numbers of pre-iterations for it to stabilize.  Good luck!
 
 All of the numbers below are numbers to try out in this application:
 
