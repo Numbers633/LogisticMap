@@ -91,6 +91,9 @@ All of the numbers below are numbers to try out in this application:
 3.58057,
 3.5758050324,
 
+30-cycle:
+3.84998135881,
+
 32-cycle:
 3.5741149,
 3.584422,
