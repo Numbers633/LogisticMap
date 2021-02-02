@@ -142,5 +142,8 @@ All of the numbers below are numbers to try out in this application:
 2,563,392-cycle
 3.56995667
 
+2,957,504-cycle:
+3.56995663
+
 11,217,664-cycle:
 3.56995664
