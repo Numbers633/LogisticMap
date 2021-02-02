@@ -2,6 +2,8 @@
 This is a guide to this logistic map program.
 There are some limits for the X and R values.  The last 3 numbers entered should be integers (though the last number can be a decimal).
 
+The progeam "CycleConformation1" is a very fast and accurate cycle conformation system.
+
 --Logistic Map--
 
 R must be between -2 and 4;
