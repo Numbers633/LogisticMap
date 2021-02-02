@@ -14,9 +14,12 @@ ALL LIMITS APPLY.
 
 A few points will not be resolvable (such as 1 and 3) by the program.  3 is a true bifurcation point, and occurs because, at the intersection point, the parabola is inclined at 90 degrees to the axis.  1 is also not resolvable as a cycle because it is declining very slowly, constantly getting smaller.  After an infinity of iterations, however, it will stabillize at 0.  The program reports if it dosen't find a cycle by saying "Failed to find a cycle.  It is possible that it might actually be chaos or a bifurcation point.  Try adjusting R.".  This statement can also occur when the R value (above 3.569945671871) is chaotic.  However, at certain places, X is actually periodic (as described below.).
 
+
+The application, when on high search quality, is very sensitive to bifurcations.  For example, entering R = 3.74 on high quality mode will return a 10-cycle, even though the bifurcation peices are still very close together.  This means the program is sensitive to bifurcations.
+
 --Cycles--
 
-If you ever find a new stable cycle with this program, please add it to the cycle dictionary below.
+If you ever find a new stable cycle with this program, please add it to the cycle dictionary below.  It is recommended that if you need high search quality that you also use higher numbers of pre-iterations for it to stabilize.  Good luck!
 
 All of the numbers below are numbers to try out in this application:
 
@@ -53,6 +56,7 @@ All of the numbers below are numbers to try out in this application:
 10-cycle:
 3.60524,
 3.64700616067001,
+3.6729992892,
 3.80849273228745,
 
 11-cycle:
@@ -90,6 +94,9 @@ All of the numbers below are numbers to try out in this application:
 28-cycle:
 3.58057,
 3.5758050324,
+
+30-cycle:
+3.84998135881,
 
 32-cycle:
 3.5741149,
