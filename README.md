@@ -2,6 +2,8 @@
 This is a guide to this logistic map program.
 There are some limits for the X and R values.  The last 3 numbers entered should be integers (though the last number can be a decimal).
 
+The progeam "CycleConformation1" is a very fast and accurate cycle conformation system.
+
 --Logistic Map--
 
 R must be between -2 and 4;
@@ -35,7 +37,7 @@ All of the numbers below are numbers to try out in this application:
 
 5-cycle:
  3.7385,
- 3.906,
+ 3.905573,
  3.990257307469,
 
 6-cycle:
@@ -45,6 +47,7 @@ All of the numbers below are numbers to try out in this application:
 7-cycle:
 3.7016407641603495818246437898408892201442915,
 3.774133387036,
+3.886028805185,
 3.96897435300104,
 
 8-cycle:
@@ -107,7 +110,7 @@ All of the numbers below are numbers to try out in this application:
 3.85136144589635,
 
 40-cycle:
-3.580966,
+3.5715656,
 
 48-cycle:
 3.5704997245,
@@ -115,8 +118,47 @@ All of the numbers below are numbers to try out in this application:
 56-cycle:
 3.5711999176,
 
+80-cycle:
+3.580966,
+
 96-cycle:
 3.84959795089101,
 
 128-cycle:
 3.5706099921585,
+
+1,152-cycle:
+3.56995665
+
+610,432-cycle:
+3.56995668
+
+1,447,808-cycle:
+3.56995659
+
+1,521,408-cycle:
+3.56995666
+
+1,800,192-cycle:
+3.56995669
+
+2,563,392-cycle
+3.56995667
+
+2,957,504-cycle:
+3.56995663
+
+4,920,448-cycle:
+3.56995662
+
+6,836,544-cycle:
+3.5699566
+
+8,576,064-cycle:
+3.56995659
+
+11,217,664-cycle:
+3.56995664
+
+19,469,184-cycle:
+3.56995661
