@@ -110,13 +110,16 @@ All of the numbers below are numbers to try out in this application:
 3.85136144589635,
 
 40-cycle:
-3.580966,
+3.5715656,
 
 48-cycle:
 3.5704997245,
 
 56-cycle:
 3.5711999176,
+
+80-cycle:
+3.580966,
 
 96-cycle:
 3.84959795089101,
