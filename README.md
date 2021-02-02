@@ -154,6 +154,9 @@ All of the numbers below are numbers to try out in this application:
 6,836,544-cycle:
 3.5699566
 
+8,576,064-cycle:
+3.56995659
+
 11,217,664-cycle:
 3.56995664
 
