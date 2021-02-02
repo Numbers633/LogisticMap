@@ -126,3 +126,21 @@ All of the numbers below are numbers to try out in this application:
 
 128-cycle:
 3.5706099921585,
+
+1,152-cycle:
+3.56995665
+
+610,432-cycle:
+3.56995668
+
+1,521,408-cycle:
+3.56995666
+
+1,800,192-cycle:
+3.56995669
+
+2,563,392-cycle
+3.56995667
+
+11,217,664-cycle:
+3.56995664
