@@ -133,6 +133,9 @@ All of the numbers below are numbers to try out in this application:
 610,432-cycle:
 3.56995668
 
+1,447,808-cycle:
+3.56995659
+
 1,521,408-cycle:
 3.56995666
 
