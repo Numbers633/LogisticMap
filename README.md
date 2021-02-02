@@ -25,6 +25,8 @@ If you ever find a new stable cycle with this program, please add it to the cycl
 
 All of the numbers below are numbers to try out in this application:
 
+Note: If you see a '?' after a cycle, then it is unconfirmed.
+
 2-cycle:
 3
 
@@ -157,9 +159,15 @@ All of the numbers below are numbers to try out in this application:
 6,836,544-cycle:
 3.5699566
 
+7,955,840-cycle:
+3.56995657
+
 8,576,064-cycle:
 3.56995658
-3.56995659
+3.56995659?
+
+10,011,507-cycle:
+3.828427
 
 11,217,664-cycle:
 3.56995664
