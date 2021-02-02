@@ -148,6 +148,9 @@ All of the numbers below are numbers to try out in this application:
 2,957,504-cycle:
 3.56995663
 
+4,682,176-cycle:
+3.569956585
+
 4,920,448-cycle:
 3.56995662
 
@@ -155,6 +158,7 @@ All of the numbers below are numbers to try out in this application:
 3.5699566
 
 8,576,064-cycle:
+3.56995658
 3.56995659
 
 11,217,664-cycle:
