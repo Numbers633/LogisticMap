@@ -37,7 +37,7 @@ All of the numbers below are numbers to try out in this application:
 
 5-cycle:
  3.7385,
- 3.906,
+ 3.905573,
  3.990257307469,
 
 6-cycle:
@@ -47,6 +47,7 @@ All of the numbers below are numbers to try out in this application:
 7-cycle:
 3.7016407641603495818246437898408892201442915,
 3.774133387036,
+3.886028805185,
 3.96897435300104,
 
 8-cycle:
