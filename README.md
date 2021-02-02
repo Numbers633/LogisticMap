@@ -150,3 +150,6 @@ All of the numbers below are numbers to try out in this application:
 
 11,217,664-cycle:
 3.56995664
+
+19,469,184-cycle:
+3.56995661
