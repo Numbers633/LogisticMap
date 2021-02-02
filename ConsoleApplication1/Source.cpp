@@ -28,7 +28,7 @@ int main()
         std::cin >> numPreIterations;
         std::cout << "Please enter the maximum cycle length: ";
         std::cin >> maxCycleLength;
-        std::cout << std::endl << "Search Quality: ";
+        std::cout << std::endl << "Search Quality (resolution): ";
         std::cin >> searchQuality;
 
         // xValue2
