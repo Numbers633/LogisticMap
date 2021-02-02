@@ -162,3 +162,6 @@ All of the numbers below are numbers to try out in this application:
 
 19,469,184-cycle:
 3.56995661
+
+53,034,812-cycle:
+3.641
